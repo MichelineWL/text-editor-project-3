@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -6,21 +6,21 @@ export default function Home() {
 
   return (
     <div className="flex justify-center items-center min-h-screen gap-x-6">
-      <button 
-        className="border-2 py-4 px-5" 
-        onClick={() => router.push('/wys')}
+      <button
+        className="border-2 py-4 px-5"
+        onClick={() => router.push("/wys")}
       >
         Wysiwyg Editor
       </button>
-      <button 
-        className="border-2 py-4 px-10" 
-        onClick={() => router.push('/cdk')}
+      <button
+        className="border-2 py-4 px-10"
+        onClick={() => router.push("/cdk")}
       >
         CK Editor
       </button>
-      <button 
-        className="border-2 py-4 px-10" 
-        onClick={() => router.push('/jod')}
+      <button
+        className="border-2 py-4 px-10"
+        onClick={() => router.push("/jod")}
       >
         React Jodit
       </button>

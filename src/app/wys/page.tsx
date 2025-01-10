@@ -1,12 +1,15 @@
-'use client'; // Indicate that this component is client-side only
+"use client"; // Indicate that this component is client-side only
 
-import { useState } from 'react';
-import dynamic from 'next/dynamic';
-import { EditorState } from 'draft-js'; // Import EditorState from draft-js
+import { EditorState } from "draft-js"; // Import EditorState from draft-js
+import dynamic from "next/dynamic";
+import { useState } from "react";
 
-const Editor = dynamic(() => import("react-draft-wysiwyg").then((mod) => mod.Editor), {
-  ssr: false, // Disable server-side rendering for this component
-});
+const Editor = dynamic(
+  () => import("react-draft-wysiwyg").then((mod) => mod.Editor),
+  {
+    ssr: false, // Disable server-side rendering for this component
+  },
+);
 
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
@@ -19,7 +22,7 @@ export default function WysiwygEditor() {
 
   // Function to handle image upload
   const imageUploadCallback = (file: File) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, _reject) => {
       // Simulate an image upload process
       setTimeout(() => {
         const imageUrl = URL.createObjectURL(file); // Generate a temporary URL for the image
